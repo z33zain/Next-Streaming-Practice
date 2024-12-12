@@ -1,4 +1,4 @@
-
+'use client'
 
 const Details = async ( {when, num, views} ) => {
     
