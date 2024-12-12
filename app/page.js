@@ -1,12 +1,14 @@
 import Card from "./components/Card";
 
 export const metadata = {
-  title: "Hello",
-  description: "Hi"
+  title: "Hello Home",
+  description: "Hi Dev"
 }
+
+
 const Page = () => {
-  // Array of 20 items to map over
-  const cards = new Array(20).fill(null);
+  // Array of 18 items to map over
+  const cards = new Array(18).fill(null);
  
 
   return (

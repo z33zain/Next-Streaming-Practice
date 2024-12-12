@@ -1,4 +1,7 @@
-import React from 'react'
+export const metadata = {
+  title: "Hello Contact",
+  description: "Hi Dev"
+}
 
 const page = () => {
   return (
