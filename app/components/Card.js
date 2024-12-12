@@ -1,5 +1,3 @@
-'use client';
-
 import React, { Suspense } from 'react';
 import { unstable_noStore as noStore } from 'next/cache';
 
