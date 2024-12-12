@@ -2,13 +2,18 @@ import Details from "./Details";
 import { Suspense } from "react";
 
 
-function getRandomWholeNumberInRange(min, max, mul) {
+function getRandomWholeNumberInRange(min, max, mul, views) {
   if(mul) {
     return Math.floor(Math.random() * (max - min + 1 * mul)) + min;
+  }
+  if(views) {
+    return Math.floor(Math.random() * (max - min * views)) + min;
   }
   else{return Math.floor(Math.random() * (max - min + 1)) + min;}
   
 }
+
+
 
 
 function Skeleton() {
@@ -30,7 +35,7 @@ const Card =  () => {
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6">
       <div className="h-60 w-full bg-gray-200 rounded-lg mb-4"></div>
       <Suspense fallback={<Skeleton/>}>
-      <Details when={getRandomWholeNumberInRange(3,10)} num={getRandomWholeNumberInRange(3,10,1000)}/>
+      <Details when={getRandomWholeNumberInRange(3,10)} num={getRandomWholeNumberInRange(3,10,1000)} views={getRandomWholeNumberInRange(1,1,1000)}/>
       </Suspense>
     </div>
   );
